@@ -4,7 +4,6 @@ import classes from "./Cockpit.css";
 const cockpit = (props) => {
   const classesAssigned = [];
   let btnClass = "";
-  console.log(props.persons.length);
   if (props.persons.length <= 2) {
     classesAssigned.push(classes.red);
   }
@@ -14,10 +13,10 @@ const cockpit = (props) => {
   if (props.showPersons) {
     btnClass = classes.Red;
   }
-
+  console.log("[Cockpit.js] Component rendering...");
   return (
     <div className={classes.Cockpit}>
-      <h1>Hi, I'm a React App</h1>
+      <h1>{props.title}</h1>
       <p className={classesAssigned.join(" ")}>This is really working!</p>
       <button className={btnClass} onClick={props.clicked}>
         Toggle Persons
