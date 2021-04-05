@@ -4,7 +4,15 @@ import classes from "./Cockpit.css";
 const cockpit = (props) => {
   useEffect(() => {
     console.log("[Cockpit.js] useEffect");
-  });
+    // http request...
+    // Request example
+    setTimeout(() => {
+      alert("Saved data to cloud!");
+    }, 1000);
+    // Array down trigger what will make useEffect works, void one triggers once
+  }, []);
+
+  // useEffect(() => {}) you can use whateveryou want
 
   const classesAssigned = [];
   let btnClass = "";
